@@ -1,0 +1,13 @@
+name: client-tests-workflow
+
+on:
+  pull_request
+  
+jobs:
+  test-client:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Goto client and run tests
+        run: cd ./wns-docker-compose-app-main/client && npm i && npm test
