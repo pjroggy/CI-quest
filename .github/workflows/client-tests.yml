@@ -10,4 +10,4 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
       - name: Goto client and run tests
-        run: cd client && npm i && npm test
+        run: cd ./wns-docker-compose-app-main/client && npm i && npm test
